@@ -1,28 +1,36 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+import tools.Reader;
+
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Day1 {
 
-    public static int gaming(String input) {
+    int result = 0;
+    public static int gaming1(String input) {
         int result = 0;
         System.out.println(Paths.get(input).toAbsolutePath());
-        try {
-            Scanner s1 = new Scanner(new File(input));
-            ArrayList<Integer> arr = new ArrayList<Integer>();
-            while (s1.hasNext()) {
-                arr.add(Integer.parseInt(s1.nextLine()));
+        ArrayList<Integer> arr = Reader.read(input);
+        for (int i = 0; i < arr.size(); i++) {
+            if (i > 0 && arr.get(i) > arr.get(i - 1)) {
+                result++;
             }
-            for (int i = 0; i < arr.size(); i++) {
-                if (i > 0 && arr.get(i) > arr.get(i - 1)) {
+        }
+        return result;
+    }
+
+    public static int gaming2(String input) {
+        int result = 0;
+        int temp = 0;
+
+        ArrayList<Integer> arr = Reader.read(input);
+        for (int i = 0; i < arr.size(); i++) {
+            if (i + 2 < arr.size()) {
+                int p1 = (arr.get(i) + arr.get(i + 1) + arr.get(i + 2));
+                if (i > 0 && p1 > temp) {
                     result++;
                 }
+                temp = p1;
             }
-            s1.close();
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
         }
         return result;
     }
