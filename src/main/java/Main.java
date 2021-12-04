@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println(Day3.gaming1("src/main/resources/input3.txt").result());*/
         long startTime = System.currentTimeMillis();
-        System.out.println(Day3.gaming2("src/main/resources/input3.txt"));
+        System.out.println(Day4.gaming2("src/main/resources/input4.txt"));
         long estimatedTime = System.currentTimeMillis() - startTime;
         System.out.println(estimatedTime);
     }

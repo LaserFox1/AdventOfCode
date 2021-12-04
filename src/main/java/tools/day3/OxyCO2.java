@@ -1,4 +1,4 @@
-package tools;
+package tools.day3;
 
 public class OxyCO2 {
     int Oxy;

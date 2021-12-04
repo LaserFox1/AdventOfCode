@@ -1,4 +1,4 @@
-package tools;
+package tools.day3;
 
 public class GammaEpsilon {
     public GammaEpsilon(String gamma, String epsilon) {
