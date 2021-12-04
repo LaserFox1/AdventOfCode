@@ -1,8 +1,8 @@
-import tools.GammaEpsilon;
-import tools.OxyCO2;
+import tools.day3.GammaEpsilon;
+import tools.day3.OxyCO2;
 import tools.ReaderString;
 import java.util.ArrayList;
-import static tools.Day3Methods.*;
+import static tools.day3.Day3Methods.*;
 
 public class Day3 {
 
